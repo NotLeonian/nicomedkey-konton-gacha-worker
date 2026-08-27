@@ -13,6 +13,7 @@
 		"url": "git+https://github.com/NotLeonian/nicomedkey-konton-gacha-worker.git"
 	},
 	"license": "MIT",
+	"main": "./src/index.ts",
 	"scripts": {
 		"dev": "wrangler dev",
 		"deploy": "npm run db:migrate:remote && wrangler deploy",
