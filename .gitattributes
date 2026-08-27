@@ -1,0 +1,58 @@
+* text=auto eol=lf
+
+# Common binary files
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.gz    binary
+*.tar   binary
+*.7z    binary
+*.jar   binary
+*.war   binary
+*.class binary
+*.exe   binary
+*.dll   binary
+*.so    binary
+*.dylib binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+
+# Markdown
+*.md    text diff=markdown whitespace=-blank-at-eol
+*.mdx   text diff=markdown whitespace=-blank-at-eol
+
+# LICENSE
+LICENSE text
+
+# Config files
+.editorconfig  text
+.gitattributes text
+.gitignore     text
+
+# JavaScript
+*.js    text
+
+# TypeScript
+*.ts    text
+
+# JSON
+*.json  text
+*.jsonc text
+
+# YAML
+*.yml   text
+*.yaml  text
+
+# SQL
+*.sql   text
+
+# .dev.vars
+.dev.vars         text
+.dev.vars.example text
