@@ -1,5 +1,8 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
+	"files": {
+		"includes": ["**", "!worker-configuration.d.ts"]
+	},
 	"formatter": {
 		"enabled": true,
 		"includes": ["**/*.js", "**/*.ts", "**/*.json", "**/*.jsonc"],

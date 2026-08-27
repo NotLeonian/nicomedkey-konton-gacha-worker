@@ -24,7 +24,6 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.10",
-		"@cloudflare/workers-types": "5.20260827.1",
 		"prettier": "3.9.6",
 		"prettier-plugin-sql-cst": "0.22.1",
 		"typescript": "7.0.2",
