@@ -1,0 +1,49 @@
+{
+	"name": "nicomedkey-konton-gacha-worker",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "nicomedkey.cc の混沌ガチャを定期的に引く Cloudflare Worker",
+	"homepage": "https://github.com/NotLeonian/nicomedkey-konton-gacha-worker#readme",
+	"bugs": {
+		"url": "https://github.com/NotLeonian/nicomedkey-konton-gacha-worker/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NotLeonian/nicomedkey-konton-gacha-worker.git"
+	},
+	"license": "MIT",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "npm run db:migrate:remote && wrangler deploy",
+		"db:migrate:local": "wrangler d1 migrations apply DB --local",
+		"db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.10",
+		"@cloudflare/workers-types": "5.20260827.1",
+		"prettier": "3.9.6",
+		"prettier-plugin-sql-cst": "0.22.1",
+		"typescript": "7.0.2",
+		"vitest": "4.1.11",
+		"wrangler": "4.126.0"
+	},
+	"engines": {
+		"node": ">=22"
+	},
+	"cloudflare": {
+		"bindings": {
+			"NICOMEDKEY_TOKEN": {
+				"description": "nicomedkey.cc の「設定 → API」から発行できるトークンです。`write:notes` のみ付与してください。外部へ公開しないでください。"
+			},
+			"ENABLED": {
+				"description": "`true` のときのみ自動投稿します。初回デプロイ時は、設定を確認してから true にすることを推奨します。"
+			},
+			"DB": {
+				"description": "投稿、bot による返信、ポイント、二重実行防止状態を保存する D1 データベースです。"
+			}
+		}
+	}
+}
