@@ -26,7 +26,19 @@ CREATE TABLE gacha_runs (
 	sent_at INTEGER,
 	completed_at INTEGER,
 	last_checked_at INTEGER,
-	error TEXT
+	error TEXT,
+	CHECK (
+		(
+			kind = 'normal'
+			AND slot_key IS NOT NULL
+			AND trigger_reply_note_id IS NULL
+		)
+		OR (
+			kind = 'premium'
+			AND slot_key IS NULL
+			AND trigger_reply_note_id IS NOT NULL
+		)
+	)
 );
 
 CREATE UNIQUE INDEX uq_normal_slot ON gacha_runs (slot_key)
