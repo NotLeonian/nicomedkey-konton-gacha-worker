@@ -1,0 +1,5 @@
+# JavaScript, TypeScript, JSON, and JSONC are formatted by Biome.
+**/*.js
+**/*.ts
+**/*.json
+**/*.jsonc
