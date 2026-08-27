@@ -1,0 +1,31 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+
+	"name": "nicomedkey-konton-gacha-worker",
+	"main": "./src/index.ts",
+	"compatibility_date": "2026-08-27",
+
+	"triggers": {
+		"crons": ["* * * * *"]
+	},
+
+	"vars": {
+		"ENABLED": "false"
+	},
+
+	"secrets": {
+		"required": ["NICOMEDKEY_TOKEN"]
+	},
+
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "nicomedkey-konton-gacha",
+			"migrations_dir": "./migrations"
+		}
+	],
+
+	"observability": {
+		"enabled": true
+	}
+}
