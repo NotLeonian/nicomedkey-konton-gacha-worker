@@ -53,6 +53,5 @@ LICENSE text
 # SQL
 *.sql   text
 
-# .dev.vars
-.dev.vars         text
+# Cloudflare Workers local secrets template
 .dev.vars.example text
