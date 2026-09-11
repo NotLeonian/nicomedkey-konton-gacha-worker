@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      prettier:
+        applies-to: version-updates
+        patterns:
+          - prettier
+          - prettier-plugin-sql-cst
