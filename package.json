@@ -28,7 +28,7 @@
 		"prettier-plugin-sql-cst": "0.22.1",
 		"typescript": "7.0.2",
 		"vitest": "4.1.11",
-		"wrangler": "4.126.0"
+		"wrangler": "4.131.0"
 	},
 	"engines": {
 		"node": "^22.12.0 || >=24.0.0"
