@@ -18,5 +18,6 @@ jobs:
 
       - run: npm ci
       - run: npm run check:biome
+      - run: npm run check:prettier
       - run: npm run typecheck
       - run: npm test
