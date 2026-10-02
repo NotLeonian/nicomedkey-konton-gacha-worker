@@ -29,7 +29,7 @@
 		"prettier": "3.9.9",
 		"prettier-plugin-sql-cst": "0.22.1",
 		"typescript": "7.0.2",
-		"vitest": "5.0.1",
+		"vitest": "5.0.2",
 		"wrangler": "4.146.0"
 	},
 	"engines": {
