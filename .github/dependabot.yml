@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: weekly
@@ -11,3 +11,13 @@ updates:
         patterns:
           - prettier
           - prettier-plugin-sql-cst
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: weekly
+    rebase-strategy: disabled
+    groups:
+      actions:
+        applies-to: version-updates
+        patterns:
+          - "actions/*"
