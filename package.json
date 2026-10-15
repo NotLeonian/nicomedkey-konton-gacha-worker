@@ -20,14 +20,14 @@
 		"db:migrate:local": "wrangler d1 migrations apply DB --local",
 		"db:migrate:remote": "wrangler d1 migrations apply DB --remote",
 		"check:biome": "biome check .",
-		"check:prettier": "prettier --check .",
+		"check:prettier": "npm ls prettier prettier-plugin-sql-cst --depth=0 && prettier --check .",
 		"typecheck": "tsc --noEmit",
 		"test": "vitest run"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",
-		"prettier": "3.9.9",
-		"prettier-plugin-sql-cst": "0.22.1",
+		"prettier": "3.9.10",
+		"prettier-plugin-sql-cst": "0.23.0",
 		"typescript": "7.0.2",
 		"vitest": "5.0.4",
 		"wrangler": "4.149.0"
