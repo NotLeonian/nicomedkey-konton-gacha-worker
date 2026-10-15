@@ -16,8 +16,13 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
-      - run: npm run check:biome
-      - run: npm run check:prettier
-      - run: npm run typecheck
-      - run: npm test
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Check lint and formatting with Biome
+        run: npm run check:biome
+      - name: Check formatter dependency versions and formatting
+        run: npm run check:prettier
+      - name: Check TypeScript types
+        run: npm run typecheck
+      - name: Run tests
+        run: npm test

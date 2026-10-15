@@ -6,17 +6,18 @@ CREATE TABLE gacha_runs (
 	command_text TEXT NOT NULL,
 	command_note_id TEXT UNIQUE,
 	status TEXT NOT NULL CHECK (
-		status IN (
-			'reserved',
-			'waiting_reply',
-			'completed',
-			'completed_cooldown',
-			'completed_unparsed',
-			'send_failed',
-			'reply_timeout',
-			'manual_review',
-			'abandoned'
-		)
+		status IN
+			(
+				'reserved',
+				'waiting_reply',
+				'completed',
+				'completed_cooldown',
+				'completed_unparsed',
+				'send_failed',
+				'reply_timeout',
+				'manual_review',
+				'abandoned'
+			)
 	),
 	response_note_id TEXT UNIQUE,
 	response_text TEXT,
