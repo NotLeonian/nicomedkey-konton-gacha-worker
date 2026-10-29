@@ -25,7 +25,7 @@
 		"test": "vitest run"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.15",
+		"@biomejs/biome": "2.6.3",
 		"prettier": "3.9.10",
 		"prettier-plugin-sql-cst": "0.23.1",
 		"typescript": "7.0.2",
