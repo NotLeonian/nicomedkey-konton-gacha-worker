@@ -21,6 +21,7 @@
 		"db:migrate:remote": "wrangler d1 migrations apply DB --remote",
 		"check:biome": "biome check .",
 		"check:prettier": "npm ls prettier prettier-plugin-sql-cst --depth=0 && prettier --check .",
+		"format:prettier": "npm ls prettier prettier-plugin-sql-cst --depth=0 && prettier --write .",
 		"typecheck": "tsc --noEmit",
 		"test": "vitest run"
 	},
