@@ -27,11 +27,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.6.8",
-		"prettier": "3.9.10",
+		"prettier": "3.10.1",
 		"prettier-plugin-sql-cst": "0.25.1",
 		"typescript": "7.0.2",
 		"vitest": "5.1.0",
-		"wrangler": "4.159.0"
+		"wrangler": "4.163.0"
 	},
 	"engines": {
 		"node": "^22.12.0 || >=24.0.0"
